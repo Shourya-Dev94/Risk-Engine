@@ -284,25 +284,14 @@ Total = (2x4) + (2x3) + (2x4) + (1x2) + (2x2) + 0 + 2 + 0
 {'Total risk score': 30, 'Risk': 'High'}
 ```
 
-## 11. How to Run
-
-```bash
-git clone <your-repository-url>
-cd <repository-folder>
-python main.py
-```
-
-Enter the values when prompted. Type the occupation exactly as `Indoor`, `Mixed` or `Outdoor`, and type `nil` if there is no health condition.
-
-## 12. Limitations
+## 11. Limitations
 
 - The thresholds and weights are chosen by the developer and are not based on clinical data, so the result is an indicative estimate and not medical advice.
 - Text inputs are case-sensitive (`Asthma` works, `asthma` is treated as "other condition"). An unrecognised occupation is scored as `Indoor`.
 - Input is not validated, so a non-numeric entry for a number field stops the program with an error.
-- The UV function has two branches returning 2, so the `elif uv <= 7` branch is redundant.
 - Values must be entered manually.
 
-## 13. Future Scope
+## 12. Future Scope
 
 - Fetch live weather, AQI and UV data from an API.
 - Validate input and handle case differences with `.strip().lower()`.
@@ -310,7 +299,7 @@ Enter the values when prompted. Type the occupation exactly as `Indoor`, `Mixed`
 - Build a GUI or web/mobile interface.
 - Tune the weights using real health datasets or machine learning.
 
-## 14. Conclusion
+## 13. Conclusion
 
 The project shows how environmental and personal factors can be combined into one risk score using functions, dictionaries and weighted arithmetic. It is simple and easy to extend, and it provides a foundation for a more advanced health-alert system.
 
